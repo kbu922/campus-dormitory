@@ -29,9 +29,8 @@ def send_notification(email, subject, body):
     msg = Message(subject, recipients=[email], body=body, sender='your_email@gmail.com')
     mail.send(msg)
 
+
 @app.route('/')
-def home():
-    return @app.route('/')
 def home():
     return '''
         <h1>기숙사 입퇴사 시스템입니다.</h1>
@@ -41,6 +40,7 @@ def home():
             <li><a href="/admin">관리자 페이지</a></li>
         </ul>
     '''
+
 @app.route('/checkin', methods=['GET', 'POST'])
 def checkin():
     if request.method == 'POST':
