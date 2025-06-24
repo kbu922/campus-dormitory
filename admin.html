@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>관리자 페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>학생 목록 및 방 배정</h2>
+    <table class="table table-bordered">
+        <tr><th>학번</th><th>이름</th><th>방번호</th></tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.student_id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.room_number or "미배정" }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
