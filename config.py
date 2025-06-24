@@ -1,6 +1,7 @@
 DB_CONFIG = {
     'host': 'localhost',
-    'user': 'root',
+    'port': 3306,  # 이 포트가 MySQL 설정과 동일해야 함
+    'user': 'your_username',
     'password': 'your_password',
-    'database': 'dormitory_db'
+    'database': 'your_database'
 }
