@@ -31,8 +31,13 @@ def send_notification(email, subject, body):
 
 @app.route('/')
 def home():
-    return "기숙사 입퇴사 시스템입니다."
-
+    return '''
+        <h1>기숙사 입퇴사 시스템입니다.</h1>
+        <ul>
+            <li><a href="/checkin">입사 신청</a></li>
+            <li><a href="/checkout">퇴사 신청</a></li>
+            <li><a href="/admin">관리자 페이지</a></li>
+        </ul>
 @app.route('/checkin', methods=['GET', 'POST'])
 def checkin():
     if request.method == 'POST':
