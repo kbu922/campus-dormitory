@@ -1,16 +1,97 @@
-<!-- templates/main.html -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>기숙사 시스템 메인</title>
+    <title>기숙사 입퇴사 시스템</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f6fb;
+        }
+
+        header {
+            background-color: #004e9b; /* 경복대학교 포털과 유사한 파란색 */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0071ce;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #004e9b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #0071ce;
+            color: white;
+            padding: 15px 30px;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+        .button:hover {
+            background-color: #005fa3;
+        }
+    </style>
 </head>
 <body>
-    <h1>🏨 기숙사 입퇴사 시스템</h1>
-    <ul>
-        <li><a href="/checkin">입사 신청</a></li>
-        <li><a href="/checkout">퇴사 신청</a></li>
-        <li><a href="/admin">관리자 페이지</a></li>
-    </ul>
+
+<header>
+    🏨 공무전 기숙사 관리 시스템
+</header>
+
+<nav>
+    <a href="/checkin">입사 신청</a>
+    <a href="/checkout">퇴사 신청</a>
+    <a href="/admin">관리자 페이지</a>
+</nav>
+
+<main>
+    <h2>환영합니다!</h2>
+    <p>기숙사 신청, 퇴사 처리, 관리 기능을 아래 버튼을 통해 시작하세요.</p>
+    <a href="/checkin" class="button">입사 신청</a>
+    <a href="/checkout" class="button">퇴사 신청</a>
+    <a href="/admin" class="button">관리자 페이지</a>
+</main>
+
+<footer>
+    &copy; 2025 경복대학교 Dormitory Management System
+</footer>
+
 </body>
 </html>
