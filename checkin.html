@@ -1,1 +1,42 @@
 
+<!-- templates/checkin.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>입사 신청</title>
+</head>
+<body>
+    <h2>입사 신청</h2>
+
+    <!-- ✅ flash 메시지 출력 -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <!-- CSRF 토큰이 있다면 Flask-WTF에서 자동 처리됨 -->
+        <label for="student_id">학번:</label>
+        <input type="text" id="student_id" name="student_id" required><br><br>
+
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="room_number">희망 호실 (선택):</label>
+        <input type="text" id="room_number" name="room_number"><br><br>
+
+        <input type="submit" value="신청">
+    </form>
+
+    <a href="/">홈으로 돌아가기</a>
+</body>
+</html>
+
+
+
